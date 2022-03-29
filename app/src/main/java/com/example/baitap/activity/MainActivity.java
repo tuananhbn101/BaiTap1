@@ -1,4 +1,4 @@
-package com.example.baitap;
+package com.example.baitap.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -78,8 +77,7 @@ public class MainActivity extends AppCompatActivity {
             binding.refresh.setRefreshing(false);
             binding.loading.setVisibility(View.GONE);
         });
-
-        binding.request.setOnClickListener(view -> mainViewModel.requestUsers());
+        mainViewModel.requestUsers();
 
         adapter.setOnItemClick(user -> {
             Intent intent = new Intent(getApplicationContext(), UserDetailActivity.class);

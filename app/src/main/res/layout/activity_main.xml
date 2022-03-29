@@ -11,7 +11,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/request"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -24,22 +24,12 @@
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
         <ProgressBar
             android:id="@+id/loading"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:indeterminateTint="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/refresh"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
-        <Button
-            android:id="@+id/request"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Request"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/refresh" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
